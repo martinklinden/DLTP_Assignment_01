@@ -25,8 +25,7 @@ namespace DLTP_Assignment_01
                 using (StreamReader file = new StreamReader(fileName))
                 {
                     Console.WriteLine("Adressboken");
-                    Console.WriteLine("Skriv 'ladda' för att ladda in Adressboken.");
-                    Console.WriteLine("Skriv 'hjälp' för att få hjälp!");
+                    Instructions();
                     string command;
                     bool loadedAddressBook = false;
                     Random rand = new Random();
@@ -130,12 +129,7 @@ namespace DLTP_Assignment_01
                         }
                         else if(command == "hjälp")
                         {
-                            Console.WriteLine("Skriv 'ladda' för att ladda in Adressboken");
-                            Console.WriteLine("Skriv 'ny' för att lägga till en ny person i adressboken");
-                            Console.WriteLine("Skriv 'visa' för att visa adressboken");
-                            Console.WriteLine("Skriv 'ta bort' för att ta bort en person ur adressboken");
-                            Console.WriteLine("Skriv 'spara' för att spara ändringarna i adressboken");
-                            Console.WriteLine("Skriv 'avsluta' för att avsluta programet");
+                            Instructions();
                         }
                         else
                         {
@@ -149,6 +143,16 @@ namespace DLTP_Assignment_01
             {
                 Console.WriteLine("Namn - Adress - Telefonnummer - Mailadress");
                 Console.WriteLine("------------------------------------------");
+            }
+            static void Instructions()
+            {
+                Console.WriteLine("Skriv 'ladda' för att ladda in Adressboken");
+                Console.WriteLine("Skriv 'ny' för att lägga till en ny person i adressboken");
+                Console.WriteLine("Skriv 'visa' för att visa adressboken");
+                Console.WriteLine("Skriv 'ta bort' för att ta bort en person ur adressboken");
+                Console.WriteLine("Skriv 'spara' för att spara ändringarna i adressboken");
+                Console.WriteLine("Skriv 'hjälp' för att få upp kommandolistan");
+                Console.WriteLine("Skriv 'avsluta' för att avsluta programet");
             }
         }
     }
